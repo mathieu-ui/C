@@ -1,22 +1,3 @@
-// #include <stdio.h>
-
-// #include "coucou.h"
-
-// extern int A; // externe permet de dire que cette variable est def mais pas dans ce fichier
-
-// int main (){
-//     coucou();
-//     // printf("Hello you \r\n");
-//     return 0;
-// }
-
-// #include <math.h> // par defaul est n'est pas compiler comme les aurtres
-
-// int main(){
-//     double A;
-//     A= cos(3.14/7);
-//     return 0;
-// }
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -28,16 +9,16 @@ void remplir(int*,int);
 
 int main()
 {
+    int o = 30;
+    int tab[o];
+
+    remplir(tab,o);
     
-    int tab[10];
+    affiche(tab,o);
 
-    remplir(tab,10);
-    
-    affiche(tab,10);
+    trie(tab,o);
 
-    trie(tab,10);
-
-    affiche(tab,10);
+    affiche(tab,o);
 
     return 0;
 }

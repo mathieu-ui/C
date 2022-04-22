@@ -1,22 +1,3 @@
-// #include <stdio.h>
-
-// #include "coucou.h"
-
-// extern int A; // externe permet de dire que cette variable est def mais pas dans ce fichier
-
-// int main (){
-//     coucou();
-//     // printf("Hello you \r\n");
-//     return 0;
-// }
-
-// #include <math.h> // par defaul est n'est pas compiler comme les aurtres
-
-// int main(){
-//     double A;
-//     A= cos(3.14/7);
-//     return 0;
-// }
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -26,18 +7,33 @@ void affiche(int*,int);
 void trie(int*,int);
 void remplir(int*,int);
 
+void s_sleep(int seconds) {
+    time_t start_time = 0;
+    time_t current_time = 0;
+    start_time = time(NULL);
+    while(current_time-start_time+1 <= seconds) {
+        current_time = time(NULL);
+    }
+}
+
 int main()
 {
-    
-    int tab[10];
+    int o = 60;
+    int tabg[o][o];
+    int tab[o];
 
-    remplir(tab,10);
-    
-    affiche(tab,10);
+    int i;
+    for ( i = 0; i < o; i++)
+    {
+        remplir(tabg[i],o);
+        s_sleep(1);
+    }
 
-    trie(tab,10);
-
-    affiche(tab,10);
+    for ( i = 0; i < o; i++)
+    {
+        affiche(tabg[i],o);
+        
+    }
 
     return 0;
 }
@@ -56,7 +52,7 @@ void remplir(int* T,int n){
 void affiche(int* T, int q){
     int i;
     for ( i = 0; i < q; i++){
-        printf(" %d ",T[i]);
+        printf("%d|",T[i]);
     }
     printf("\n");
 }
