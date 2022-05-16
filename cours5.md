@@ -1,5 +1,7 @@
 # C 5
 
+Cous : http://usthb.orgfree.com/info/2eminfo/cours/algo/CoursCtableauxmultidimensionnels.htm#:~:text=Le%20langage%20C%20autorise%20les,d'o%C3%B9%20la%20syntaxe%20char.
+
 tableau statique -> taille connue au demarage
 
 ex :
